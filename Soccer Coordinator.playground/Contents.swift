@@ -225,9 +225,13 @@ func setTeams (teams : [[[String: Any]]]) -> Void {
         let teamPractiseTime = teamsAndPractiseTimes[teamName]!
         
         for player in team{
-            print(player)
-            //player["team"] = teamName
-            //player["practiseTime"] = teamPractiseTime
+            switch teamName{
+            case "Raptors" : teamRaptors.append(player["playerName"] as! String)
+            case "Sharks" : teamSharks.append(player["playerName"] as! String)
+            case "Dragons" : teamDragons.append(player["playerName"] as! String)
+            default: print("Something is wrong")
+            }
+            
         }
     }
 }
@@ -253,9 +257,9 @@ while index < teamAmount {
     index += 1
 }
 
-var teamSharks = []
-var teamDragons = []
-var teamRaptors = []
+var teamSharks :[String] = []
+var teamDragons :[String] = []
+var teamRaptors :[String] = []
 
 /*
  --------------------------------
