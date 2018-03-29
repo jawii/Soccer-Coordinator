@@ -179,7 +179,6 @@ func printTeamsInfo (withTeam teams : [[[String: Any]]]) -> Void {
 
 func sendLetters (teams : [[[String: Any]]]) -> Void {
     
-    var index = 0
     //get the team names
     var teamNames :[String] = []
     for (key, value) in teamsAndPractiseTimes{
@@ -187,15 +186,50 @@ func sendLetters (teams : [[[String: Any]]]) -> Void {
     }
     //Go trough all players
     for team in teams {
-        var team = teamNames.removeFirst()
-        print(team)
-        print(teamsAndPractiseTimes[team])
-    
+        let teamName = teamNames.removeFirst()
+        let teamPractiseTime = teamsAndPractiseTimes[teamName]!
+        
         for player in team {
+            //player["team"] = teamName
+            let playerName :String = player["playerName"] as! String
+            let guardianName :String = player["guardianName"] as! String
+            
+            var str = "Hello "
+            str += guardianName
+            str += "\n"
+            str += "Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal \n"
+            str += "Your child "
+            str += playerName
+            str += " plays in team named "
+            str += teamName
+            str += ". Your first practise will be in "
+            str += teamPractiseTime
+            str += ".\nSee you at the field! \n - Coach \n"
+            
+            letters.append(str)
+            print(str)
             
         }
     }
     
+}
+func setTeams (teams : [[[String: Any]]]) -> Void {
+    //get the team names
+    var teamNames :[String] = []
+    for (key, value) in teamsAndPractiseTimes{
+        teamNames.append(key)
+    }
+    //Go trough all players
+    for team in teams {
+        let teamName = teamNames.removeFirst()
+        let teamPractiseTime = teamsAndPractiseTimes[teamName]!
+        
+        for player in team{
+            print(player)
+            //player["team"] = teamName
+            //player["practiseTime"] = teamPractiseTime
+        }
+    }
 }
 /*
  --------------------------------
@@ -206,6 +240,7 @@ func sendLetters (teams : [[[String: Any]]]) -> Void {
 */
 let playerAmount = playersData.count
 let teamAmount = teamsAndPractiseTimes.count
+var letters :[String] = []
 
 
 var teams :[[[String : Any]]] = []
@@ -217,6 +252,10 @@ while index < teamAmount {
     teams.append(team)
     index += 1
 }
+
+var teamSharks = []
+var teamDragons = []
+var teamRaptors = []
 
 /*
  --------------------------------
@@ -265,7 +304,8 @@ for player in nonExperiencedPlayers {
 printTeamsInfo(withTeam: teams)
 
 //SEND LETTERS
-sendLetters(teams: teams)
+setTeams(teams: teams)
+//sendLetters(teams: teams)
 
 
 
