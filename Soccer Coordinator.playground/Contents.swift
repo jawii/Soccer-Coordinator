@@ -159,57 +159,47 @@ func calculateTeamsExperiencedPlayersAmount(withTeamArray players : [[String: An
     return experienced
 }
 
-func printTeamsInfo (withTeam teams : [[[String: Any]]]) -> Void {
-    var index = 1
-    for team in teams{
-        let height = calculateTeamsAverageHeight(withArrayOfPlayers: team);
-        var experiencedPlayers = calculateTeamsExperiencedPlayersAmount(withTeamArray: team)
-        var str = ""
-        str += "Team " + String(index) + " player amount: "
-        str += String(team.count)
-        str += "\nTeam average height: "
-        str += String(round(height))
-        str += "\nNumber of Experienced players: "
-        str += String(experiencedPlayers)
-        str += "\n"
-        print(str)
-        index += 1
-    }
+func printTeamsInfo (withTeam team : [[String: Any]]) -> Void {
+    let height = calculateTeamsAverageHeight(withArrayOfPlayers: team);
+    let experiencedPlayers = calculateTeamsExperiencedPlayersAmount(withTeamArray: team)
+    var str = ""
+    let teamName = team[0]["teamName"] as! String
+    //let teamName = "Raptors"
+    str += "Team " + teamName + " player amount: "
+    str += String(team.count)
+    str += "\nTeam average height: "
+    str += String(round(height))
+    str += "\nNumber of Experienced players: "
+    str += String(experiencedPlayers)
+    str += "\n"
+    print(str)
+    index += 1
 }
 
-func sendLetters (teams : [[[String: Any]]]) -> Void {
+func sendLetters (team : [[String: Any]]) -> Void {
     
-    //get the team names
-    var teamNames :[String] = []
-    for (key, value) in teamsAndPractiseTimes{
-        teamNames.append(key)
-    }
-    //Go trough all players
-    for team in teams {
-        let teamName = teamNames.removeFirst()
-        let teamPractiseTime = teamsAndPractiseTimes[teamName]!
+    for player in team {
+        let playerName :String = player["playerName"] as! String
+        let guardianName :String = player["guardianName"] as! String
+        let teamName :String = player["teamName"] as! String
+        let teamPractiseTime :String = player["practiseTime"] as! String
+    
         
-        for player in team {
-            //player["team"] = teamName
-            let playerName :String = player["playerName"] as! String
-            let guardianName :String = player["guardianName"] as! String
-            
-            var str = "Hello "
-            str += guardianName
-            str += "\n"
-            str += "Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal \n"
-            str += "Your child "
-            str += playerName
-            str += " plays in team named "
-            str += teamName
-            str += ". Your first practise will be in "
-            str += teamPractiseTime
-            str += ".\nSee you at the field! \n - Coach \n"
-            
-            letters.append(str)
-            print(str)
-            
-        }
+        var str = "Hello "
+        str += guardianName
+        str += "\n"
+        str += "Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal \n"
+        str += "Your child "
+        str += playerName
+        str += " plays in team named "
+        str += teamName
+        str += ". Your first practise will be in "
+        str += teamPractiseTime
+        str += ".\nSee you at the field! \n - Coach \n"
+        
+        letters.append(str)
+        print(str)
+    
     }
     
 }
@@ -223,13 +213,17 @@ func setTeams (teams : [[[String: Any]]]) -> Void {
     for team in teams {
         let teamName = teamNames.removeFirst()
         let teamPractiseTime = teamsAndPractiseTimes[teamName]!
-        
+    
         for player in team{
+            //cant change the player because it's let???
+            var kid = player
+            kid["teamName"] = teamName
+            kid["practiseTime"] = teamPractiseTime
             switch teamName{
-            case "Raptors" : teamRaptors.append(player["playerName"] as! String)
-            case "Sharks" : teamSharks.append(player["playerName"] as! String)
-            case "Dragons" : teamDragons.append(player["playerName"] as! String)
-            default: print("Something is wrong")
+                case "Raptors" : teamRaptors.append(kid)
+                case "Sharks" : teamSharks.append(kid)
+                case "Dragons" : teamDragons.append(kid)
+                default: print("Something is wrong")
             }
             
         }
@@ -257,9 +251,9 @@ while index < teamAmount {
     index += 1
 }
 
-var teamSharks :[String] = []
-var teamDragons :[String] = []
-var teamRaptors :[String] = []
+var teamSharks :[[String : Any]] = []
+var teamDragons :[[String : Any]] = []
+var teamRaptors :[[String : Any]] = []
 
 /*
  --------------------------------
@@ -304,12 +298,23 @@ for player in nonExperiencedPlayers {
     }
 }
 
-//PRINT TEAMS INFO
-printTeamsInfo(withTeam: teams)
+
 
 //SEND LETTERS
 setTeams(teams: teams)
-//sendLetters(teams: teams)
+
+//PRINT TEAMS INFO
+printTeamsInfo(withTeam: teamRaptors)
+printTeamsInfo(withTeam: teamSharks)
+printTeamsInfo(withTeam: teamDragons)
+
+sendLetters(team: teamRaptors)
+sendLetters(team: teamSharks)
+sendLetters(team: teamDragons)
+
+print(letters)
+
+
 
 
 
