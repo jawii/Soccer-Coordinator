@@ -126,6 +126,32 @@ let teamsAndPractiseTimes : [String : String] =
 /*
  --------------------------------
  
+ CONSTANTS AND VARIABLES
+ 
+ --------------------------------
+ */
+let playerAmount = playersData.count
+let teamAmount = teamsAndPractiseTimes.count
+var letters :[String] = []
+
+
+var teams :[[[String : Any]]] = []
+
+var index = 0
+while index < teamAmount {
+    //create team
+    let team : [[String : Any ]] = []
+    teams.append(team)
+    index += 1
+}
+
+var teamSharks :[[String : Any]] = []
+var teamDragons :[[String : Any]] = []
+var teamRaptors :[[String : Any]] = []
+
+/*
+ --------------------------------
+ 
  FUNCTIONS
 
  --------------------------------
@@ -173,7 +199,6 @@ func printTeamsInfo (withTeam team : [[String: Any]]) -> Void {
     str += String(experiencedPlayers)
     str += "\n"
     print(str)
-    index += 1
 }
 
 func sendLetters (team : [[String: Any]]) -> Void {
@@ -206,7 +231,7 @@ func sendLetters (team : [[String: Any]]) -> Void {
 func setTeams (teams : [[[String: Any]]]) -> Void {
     //get the team names
     var teamNames :[String] = []
-    for (key, value) in teamsAndPractiseTimes{
+    for (key, _) in teamsAndPractiseTimes{
         teamNames.append(key)
     }
     //Go trough all players
@@ -229,31 +254,7 @@ func setTeams (teams : [[[String: Any]]]) -> Void {
         }
     }
 }
-/*
- --------------------------------
- 
- CONSTANTS AND VARIABLES
- 
- --------------------------------
-*/
-let playerAmount = playersData.count
-let teamAmount = teamsAndPractiseTimes.count
-var letters :[String] = []
 
-
-var teams :[[[String : Any]]] = []
-
-var index = 0
-while index < teamAmount {
-    //create team
-    let team : [[String : Any ]] = []
-    teams.append(team)
-    index += 1
-}
-
-var teamSharks :[[String : Any]] = []
-var teamDragons :[[String : Any]] = []
-var teamRaptors :[[String : Any]] = []
 
 /*
  --------------------------------
@@ -281,7 +282,7 @@ nonExperiencedPlayers = sortArrayOfDicsByHeight(array: nonExperiencedPlayers)
 experiencedPlayers = sortArrayOfDicsByHeight(array: experiencedPlayers)
 
 
-//iterate players and keep adding player to team
+//iterate players and keep adding player to teams changin team with index
 index = 0
 
 for player in experiencedPlayers {
@@ -312,7 +313,6 @@ sendLetters(team: teamRaptors)
 sendLetters(team: teamSharks)
 sendLetters(team: teamDragons)
 
-print(letters)
 
 
 
