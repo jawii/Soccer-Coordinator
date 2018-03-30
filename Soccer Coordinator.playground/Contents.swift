@@ -3,7 +3,6 @@
 
 import UIKit
 
-//Any?
 var playersData: [[String : Any]] = [
     [
         "playerName" : "Joe Smith",
@@ -113,6 +112,14 @@ var playersData: [[String : Any]] = [
         "isExperienced": true,
         "guardianName": "Hyman and Rachel Krustofski"
     ]
+    /*,
+    [
+        "playerName" : "Jaakko Kenttä",
+        "height": 44.0,
+        "isExperienced": true,
+        "guardianName": "Saara Kenttä"
+    ]
+    */
 ]
 
 let teamsAndPractiseTimes : [String : String] =
@@ -145,6 +152,7 @@ while index < teamAmount {
     index += 1
 }
 
+//Final teams <- didnt read the instructions carefully so i have to manage these here
 var teamSharks :[[String : Any]] = []
 var teamDragons :[[String : Any]] = []
 var teamRaptors :[[String : Any]] = []
@@ -209,7 +217,6 @@ func sendLetters (team : [[String: Any]]) -> Void {
         let teamName :String = player["teamName"] as! String
         let teamPractiseTime :String = player["practiseTime"] as! String
     
-        
         var str = "Hello "
         str += guardianName
         str += "\n"
@@ -224,10 +231,9 @@ func sendLetters (team : [[String: Any]]) -> Void {
         
         letters.append(str)
         print(str)
-    
     }
-    
 }
+
 func setTeams (teams : [[[String: Any]]]) -> Void {
     //get the team names
     var teamNames :[String] = []
@@ -240,7 +246,7 @@ func setTeams (teams : [[[String: Any]]]) -> Void {
         let teamPractiseTime = teamsAndPractiseTimes[teamName]!
     
         for player in team{
-            //cant change the player because it's let???
+            //player["teamName"] = teamName // -> error: cannot assign through subscript: 'player' is a 'let' constant
             var kid = player
             kid["teamName"] = teamName
             kid["practiseTime"] = teamPractiseTime
@@ -250,11 +256,9 @@ func setTeams (teams : [[[String: Any]]]) -> Void {
                 case "Dragons" : teamDragons.append(kid)
                 default: print("Something is wrong")
             }
-            
         }
     }
 }
-
 
 /*
  --------------------------------
@@ -282,13 +286,14 @@ nonExperiencedPlayers = sortArrayOfDicsByHeight(array: nonExperiencedPlayers)
 experiencedPlayers = sortArrayOfDicsByHeight(array: experiencedPlayers)
 
 
-//iterate players and keep adding player to teams changin team with index
+//iterate players on experienced team and keep adding player to teams changing team with index
 index = 0
 
 for player in experiencedPlayers {
     teams[index % teamAmount].append(player)
     index += 1
 }
+
 //go other way around with non experienced players
 index = teamAmount - 1
 for player in nonExperiencedPlayers {
