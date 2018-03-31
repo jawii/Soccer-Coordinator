@@ -3,7 +3,7 @@
 
 import UIKit
 
-var playersData: [[String : Any]] = [
+var players: [[String : Any]] = [
     [
         "playerName" : "Joe Smith",
         "height": 42.0,
@@ -37,13 +37,14 @@ var playersData: [[String : Any]] = [
     [
         "playerName" : "Kimmy Stein",
         "height": 41.0,
-        "isExperienced": true,
+        //this was wrong first
+        "isExperienced": false,
         "guardianName": "Bill and Hillary Stein"
     ],
     [
         "playerName" : "Sammy Adams",
         "height": 45.0,
-        "isExperienced": true,
+        "isExperienced": false,
         "guardianName": "Jeff Adams"
     ],
     [
@@ -137,7 +138,7 @@ let teamsAndPractiseTimes : [String : String] =
  
  --------------------------------
  */
-let playerAmount = playersData.count
+let playerAmount = players.count
 let teamAmount = teamsAndPractiseTimes.count
 var letters :[String] = []
 
@@ -271,7 +272,7 @@ func setTeams (teams : [[[String: Any]]]) -> Void {
 var experiencedPlayers: [[String : Any]] = []
 var nonExperiencedPlayers: [[String : Any]] = []
 
-for player in playersData {
+for player in players {
     let isExperienced = player["isExperienced"] as! Bool
     if isExperienced {
         experiencedPlayers.append(player)
