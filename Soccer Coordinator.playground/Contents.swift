@@ -325,32 +325,32 @@ sendLetters(team: teamDragons)
  
  
  Team Raptors player amount: 6
- Team average height: 43.0
+ Team average height: 42.0
  Number of Experienced players: 3
  
  Team Sharks player amount: 6
  Team average height: 43.0
- Number of Experienced players: 4
+ Number of Experienced players: 3
  
  Team Dragons player amount: 6
- Team average height: 42.0
- Number of Experienced players: 4
+ Team average height: 43.0
+ Number of Experienced players: 3
  
- Hello Henrietta Dumas
+ Hello Thomas Helm and Eva Jones
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Suzane GreenBerg plays in team named Raptors. Your first practise will be in March 18, 1pm.
+ Your child Philip Helm plays in team named Raptors. Your first practise will be in March 18, 1pm.
  See you at the field!
  - Coach
  
- Hello Jim and Jan Smith
+ Hello Heather Bledsoe
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Joe Smith plays in team named Raptors. Your first practise will be in March 18, 1pm.
+ Your child Karl Saygan plays in team named Raptors. Your first practise will be in March 18, 1pm.
  See you at the field!
  - Coach
  
- Hello Bill and Hillary Stein
+ Hello Clara Tanner
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Kimmy Stein plays in team named Raptors. Your first practise will be in March 18, 1pm.
+ Your child Jill Tanner plays in team named Raptors. Your first practise will be in March 18, 1pm.
  See you at the field!
  - Coach
  
@@ -360,15 +360,33 @@ sendLetters(team: teamDragons)
  See you at the field!
  - Coach
  
- Hello Claire Willis
+ Hello Aaron and Jill Finkelstein
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Arnold Willis plays in team named Raptors. Your first practise will be in March 18, 1pm.
+ Your child Ben Finkelstein plays in team named Raptors. Your first practise will be in March 18, 1pm.
  See you at the field!
  - Coach
  
- Hello Sam and Elaine Kavalier
+ Hello Gala Dali
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Joe Kavalier plays in team named Raptors. Your first practise will be in March 18, 1pm.
+ Your child Sal Dali plays in team named Raptors. Your first practise will be in March 18, 1pm.
+ See you at the field!
+ - Coach
+ 
+ Hello Hyman and Rachel Krustofski
+ Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
+ Your child Herschel Krustofski plays in team named Sharks. Your first practise will be in March 17, 3pm.
+ See you at the field!
+ - Coach
+ 
+ Hello Sara and Jenny Bon
+ Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
+ Your child Bill Bon plays in team named Sharks. Your first practise will be in March 17, 3pm.
+ See you at the field!
+ - Coach
+ 
+ Hello Wynonna Brown
+ Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
+ Your child Les Clay plays in team named Sharks. Your first practise will be in March 17, 3pm.
  See you at the field!
  - Coach
  
@@ -378,57 +396,33 @@ sendLetters(team: teamDragons)
  See you at the field!
  - Coach
  
- Hello Thomas Helm and Eva Jones
+ Hello Bill and Hillary Stein
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Philip Helm plays in team named Sharks. Your first practise will be in March 17, 3pm.
+ Your child Kimmy Stein plays in team named Sharks. Your first practise will be in March 17, 3pm.
  See you at the field!
  - Coach
  
- Hello Heather Bledsoe
+ Hello Sam and Elaine Kavalier
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Karl Saygan plays in team named Sharks. Your first practise will be in March 17, 3pm.
+ Your child Joe Kavalier plays in team named Sharks. Your first practise will be in March 17, 3pm.
+ See you at the field!
+ - Coach
+ 
+ Hello Henrietta Dumas
+ Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
+ Your child Suzane GreenBerg plays in team named Dragons. Your first practise will be in March 17, 1pm.
+ See you at the field!
+ - Coach
+ 
+ Hello Jim and Jan Smith
+ Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
+ Your child Joe Smith plays in team named Dragons. Your first practise will be in March 17, 1pm.
  See you at the field!
  - Coach
  
  Hello Robin and Sarika Soto
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Diego Soto plays in team named Sharks. Your first practise will be in March 17, 3pm.
- See you at the field!
- - Coach
- 
- Hello Aaron and Jill Finkelstein
- Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Ben Finkelstein plays in team named Sharks. Your first practise will be in March 17, 3pm.
- See you at the field!
- - Coach
- 
- Hello Charles and Sylvia Gill
- Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Matt Gill plays in team named Sharks. Your first practise will be in March 17, 3pm.
- See you at the field!
- - Coach
- 
- Hello Hyman and Rachel Krustofski
- Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Herschel Krustofski plays in team named Dragons. Your first practise will be in March 17, 1pm.
- See you at the field!
- - Coach
- 
- Hello Sara and Jenny Bon
- Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Bill Bon plays in team named Dragons. Your first practise will be in March 17, 1pm.
- See you at the field!
- - Coach
- 
- Hello Wynonna Brown
- Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Les Clay plays in team named Dragons. Your first practise will be in March 17, 1pm.
- See you at the field!
- - Coach
- 
- Hello Clara Tanner
- Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Jill Tanner plays in team named Dragons. Your first practise will be in March 17, 1pm.
+ Your child Diego Soto plays in team named Dragons. Your first practise will be in March 17, 1pm.
  See you at the field!
  - Coach
  
@@ -438,9 +432,15 @@ sendLetters(team: teamDragons)
  See you at the field!
  - Coach
  
- Hello Gala Dali
+ Hello Claire Willis
  Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
- Your child Sal Dali plays in team named Dragons. Your first practise will be in March 17, 1pm.
+ Your child Arnold Willis plays in team named Dragons. Your first practise will be in March 17, 1pm.
+ See you at the field!
+ - Coach
+ 
+ Hello Charles and Sylvia Gill
+ Soccer teams are made. We made teams so that every team has equal amount of experienced players and teams average heights are almost equal
+ Your child Matt Gill plays in team named Dragons. Your first practise will be in March 17, 1pm.
  See you at the field!
  - Coach 
  
